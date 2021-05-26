@@ -1,0 +1,2 @@
+# Google Vision APIで使用するAPIキーをgit ignoreで逃がす
+gitignore.js

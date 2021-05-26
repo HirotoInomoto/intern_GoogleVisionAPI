@@ -7,9 +7,9 @@
 // })
 
 // URLの定義
-var KEY = 'AIzaSyAAYebjirqRPCo3tkhJYWOEeMzt5IM9Bt4';
-// ここは人によって変わる
 var url = 'https://vision.googleapis.com/v1/images:annotate?key=';
+// KEYは「gitignore.js」から持ってきている。
+// 読み込み順がgitignore.js→intern.jsであれば使用できる
 var api_url = url + KEY;
 
 // 画像をbase64に変換
