@@ -7,7 +7,7 @@
 // })
 
 // URLの定義
-var KEY = 'AIzaSyAAYebjirqRPCo3tkhJYWOEeMzt5IM9Bt4';
+// var KEY = 'AIzaSyAAYebjirqRPCo3tkhJYWOEeMzt5IM9Bt4';
 // ここは人によって変わる
 var url = 'https://vision.googleapis.com/v1/images:annotate?key=';
 var api_url = url + KEY;
