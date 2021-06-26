@@ -11,10 +11,105 @@
 
 <!DOCTYPE HTML>
 <html>
-    <head>
-    </head>
-    <body>
-        <script src="../js/gitignore.js"></script>
-        <script src="../js/intern.js"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
+    <title>イノモトサン</title>
+    <link rel="stylesheet" href="../css/intern.css">
+</head>
+
+<body>
+    <header>
+        <p>Image Analytics</p>
+    </header>
+    <main id="main">
+        <div class="img-wrap" id="img-wrap">
+            <img id="changing-img" class="default-img" src="../img/intern-img.png" alt="デフォルト画像">
+        </div>
+        <div class="wrapper" id="wrapper">
+            <div id="divdiv"></div>
+            <!-- <canvas id="canvas"></canvas> -->
+        </div>
+        <input type="file" id="input">
+        <div class="flex-wrap">
+            <div class="objects-btn" id="objects-btn">
+                <p>Objects</p>
+            </div>
+            <div class="safe-search-btn" id="safe-search-btn">
+                <p>Safe Search</p>
+            </div>
+        </div>
+        <div class="safe-search-results" id="safe-search-results">
+            <!-- 後々挿入するpタグのためのdivタグのflexきかせるためのdivタグとメーター実装のためのCSS -->
+            <div class="paragraph" id="paragraph1">
+                <p>adult</p> 
+                <p id="insert-text1"></p>
+            </div>
+            <div class="parameter-wrap" id="parmeter-wrap1">
+                <div class="parameter" id="parameter11"></div>
+                <div class="parameter" id="parameter12"></div>
+                <div class="parameter" id="parameter13"></div>
+                <div class="parameter" id="parameter14"></div>
+                <div class="parameter" id="parameter15"></div>
+            </div>
+            <div class="paragraph" id="paragraph2">
+                <p>medical</p>
+                <p id="insert-text2"></p>
+            </div>
+            <div class="parameter-wrap" id="parmeter-wrap2">
+                <div class="parameter" id="parameter21"></div>
+                <div class="parameter" id="parameter22"></div>
+                <div class="parameter" id="parameter23"></div>
+                <div class="parameter" id="parameter24"></div>
+                <div class="parameter" id="parameter25"></div>
+            </div>
+            <div class="paragraph" id="paragraph3">
+                <p>racy</p>
+                <p id="insert-text3"></p>
+            </div>
+            <div class="parameter-wrap" id="parmeter-wrap3">
+                <div class="parameter" id="parameter31"></div>
+                <div class="parameter" id="parameter32"></div>
+                <div class="parameter" id="parameter33"></div>
+                <div class="parameter" id="parameter34"></div>
+                <div class="parameter" id="parameter35"></div>
+            </div>
+            <div class="paragraph" id="paragraph4">
+                <p>spoof</p>
+                <p id="insert-text4"></p>
+            </div>
+            <div class="parameter-wrap" id="parmeter-wrap4">
+                <div class="parameter" id="parameter41"></div>
+                <div class="parameter" id="parameter42"></div>
+                <div class="parameter" id="parameter43"></div>
+                <div class="parameter" id="parameter44"></div>
+                <div class="parameter" id="parameter45"></div>
+            </div>
+            <div class="paragraph" id="paragraph5">
+                <p>violence</p>
+                <p id="insert-text5"></p>
+            </div>
+            <div class="parameter-wrap" id="parmeter-wrap5">
+                <div class="parameter" id="parameter51"></div>
+                <div class="parameter" id="parameter52"></div>
+                <div class="parameter" id="parameter53"></div>
+                <div class="parameter" id="parameter54"></div>
+                <div class="parameter" id="parameter55"></div>
+            </div>
+        </div>
+        <!-- objects-resultsの方が後に読み込み、レイヤーをsafe-search-resultsより上に-->
+        <div class="objects-results" id="objects-results">
+            
+        </div>
+    </main>
+    <footer>
+        
+
+    </footer>
+    <script src="../js/gitignore.js"></script>
+    <script src="../js/intern.js"></script>
+</body>
+
 </html>

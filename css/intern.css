@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/* 画面最上部に固定。　相対的な数値にしている。 */
+
+header {
+    background: blueviolet;
+    height: 5vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header p {
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    line-height: 5vh;
+}
+
+
+
+main {
+    height: 90vh;
+    z-index:10;
+}
+/* default-imgを中央配置するためのwrapperとしてのdivタグ */
+.img-wrap{
+    position:fixed;
+    top:5vh;
+    left:0;
+    height:43vh;
+    width:100vw;
+    background:rgb(235, 230, 230);
+    z-index:6;
+}
+/* default-imgが一番下 */
+.default-img{
+    display:block;
+    margin:auto;
+    max-height:100%;
+    max-width:100%;
+    object-fit: contain;
+    z-index:5;
+}
+/* canvasは真ん中 */
+.wrapper{
+    position:fixed;
+    width:100%;
+    height:43vh;
+    top:5vh;
+    left:0;
+    z-index:7;
+}
+
+#divdiv{
+    position: relative;
+    display:block;
+    margin:0 auto;
+    z-index:6;
+}
+
+#divdiv div{
+    border:solid 2px yellow;
+    position: absolute;
+}
+
+/* canvas{
+    display:block;
+    margin:auto;
+    z-index:6;
+} */
+/* #inputは一番上 */
+#input{
+    position:fixed;
+    left:0;
+    top:5vh;
+    width:100%;
+    height:43vh;
+    opacity:0;
+    z-index:8;
+}
+/* objects-btnとsafe-search-btnの並列配置 */
+.flex-wrap{
+    position:fixed;
+    top:48vh;
+    left:0;
+    display:flex;
+    justify-content: space-around;
+    height:8vh;
+    width:100vw;
+}
+
+.objects-btn{
+    width:43%;
+    background:yellow;
+    height:5vh;
+    border-radius: 10px;
+    /* 縦の中央揃え */
+    margin:auto 0;  
+}
+/* objects-btn切り替え用 */
+.objects-btn2{
+    width:43%;
+    background:rgb(235, 230, 230);
+    height:5vh;
+    border-radius: 10px;
+    /* 縦の中央揃え */
+    margin:auto 0; 
+}
+
+    .objects-btn p,.objects-btn2 p{
+        text-align:center;
+        font-size:25px;
+        /* 縦の中央揃え */
+        margin:auto 0;
+    }
+
+
+.safe-search-btn{
+    width:43%;
+    background:rgb(235, 230, 230);
+    height:5vh;
+    border-radius: 10px;
+    /* 縦の中央揃え */
+    margin:auto 0;
+}
+/*safe-search-btn切り替え用  */
+.safe-search-btn2{
+    width:43%;
+    background:yellow;
+    height:5vh;
+    border-radius: 10px;
+    /* 縦の中央揃え */
+    margin:auto 0;
+}
+
+.safe-search-btn p,.safe-search-btn2 p{
+    text-align:center;
+    font-size:25px;
+    /* 縦の中央揃え */
+    margin:auto 0;
+}
+
+
+/* 検出結果反映用クラス */
+.safe-search-results{
+    display:none;
+    position:fixed;
+    top:58vh;
+    left:0;
+    width:100vw;
+    height:37vh;
+    margin:auto 0;
+}
+
+.paragraph{
+    display:flex;
+    justify-content:space-between;
+}
+
+.paragraph p{
+    margin:0 3%;
+}
+
+.parameter-wrap{
+    margin:auto;
+    display:flex;
+    justify-content: space-around;
+    width:95vw;
+    height:9%;
+}
+.parameter{
+    width:18%;
+    height:70%;
+    margin:auto 0;
+    background:rgb(235, 230, 230);
+    border-radius: 10%;
+}
+
+.on-parameter{
+    width:18%;
+    height:70%;
+    margin:auto 0;
+    background:rgb(136, 221, 140);
+    border-radius: 10%;
+}
+
+
+
+.objects-results{
+    display:block;
+    position:fixed;
+    top:56vh;
+    left:7vw;
+    width:86vw;
+    height:39vh;
+    overflow: auto;
+    }
+
+.objects-results>:nth-child(1){
+    display:flex;
+    height:18%;
+    background:rgb(167, 164, 164);
+    border:solid 2px black;
+    margin:0 auto;
+    justify-content:space-between;
+}
+
+.objects-results>:nth-child(1) p{
+    line-height:100%;
+    font-size:14px;
+    margin:auto 5%;
+
+}
+
+
+.objects-results>:nth-child(1n+2){
+    display:flex;
+    justify-content: space-between;
+    height:18%;
+    border:solid 1px black;
+    margin:0 auto;
+}
+
+.objects-results>:nth-child(1n+2) p{
+    line-height:100%;
+    font-size:14px;
+    margin:auto 5%;
+    justify-content:space-between;
+}
+/* 結果反映終了 */
+
+
+footer {
+    /* 画面最下部に固定。　相対的な数値にしている。 */
+    height: 5vh;
+    background: rgb(137, 43, 226);
+    height: 5vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
