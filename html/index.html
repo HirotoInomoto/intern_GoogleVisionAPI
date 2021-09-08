@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='ja'>
+  <head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' type='text/css' href="../css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>画像認識</h1>
+    </header>
+    <div class='upload'>
+      <img src='' alt='' id='upload_img'>
+      <svg id='upload_img_line'>
+      </svg>
+      <input type='file' id='input'>
+    </div>
+    <div  class='result'>
+      <div class='result_title'>
+        <h1 id='result_objects'>Objects</h1>
+        <h1 id='result_safe-search'>Safe Search</h1>
+      </div>
+      <div class='objects' id="objects">
+        <div class='result_text' id='result_text'>
+          <div>
+            <p>Name</p>
+            <p>Score</p>
+          </div>
+          <div class='result_text_table' id='result_text_table'></div>
+        </div>
+      </div>
+      <div class='safe-search none' id="safe-search">
+        <div class="safe-search_container">
+          <canvas id='myRadarChart' height="20px" width="20px"></canvas>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>thank you for your using</p>
+    </footer>
+
+  　<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js'></script>
+    <script src='../js/script.js'></script>
+  </body>
+</html>
