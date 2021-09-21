@@ -9,12 +9,327 @@
 <!-- 基本はこの3つのファイルを利用して作成してください。           -->
 <!-- ========================================================== -->
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <body>
-        <script src="../js/gitignore.js"></script>
-        <script src="../js/intern.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="../css/intern.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Image Analysis</h2>
+    </header>
+    <main>
+      <form class="image-display">
+        <img
+          id="result"
+          src="https://frontend3api.s3.ap-northeast-3.amazonaws.com/image/1200px-Picture_icon_BLACK.svg.png"
+        />
+        <svg id="objectWrapper" style="display: none"></svg>
+        <input id="img-input" name="file" type="file" />
+      </form>
+
+      <ul class="tub-lists">
+        <li id="tub-list1">
+          <p>Object</p>
+        </li>
+        <li id="tub-list2">
+          <p>Safe-Search</p>
+        </li>
+      </ul>
+
+      <div class="result-display">
+        <div id="result-tab-1">
+          <div id="objectTable" class="objectTable">
+            <div class="objectTable__label">objects</div>
+          </div>
+          <div class="result-tab__content"></div>
+        </div>
+        <div id="result-tab-2">
+          <div class="result-tab__content">
+            <div class="result-tab__safesearch-list">
+              <p class="result-tab__safesearch-list-text">
+                <span
+                  class="
+                    result-tab__safesearch-list-text-title
+                    result-tab__safesearch-list-text-title-1
+                  "
+                  >adult</span
+                >
+                <span
+                  class="
+                    result-tab__safesearch-list-text-result
+                    result-tab__safesearch-list-text-result-1
+                  "
+                ></span>
+              </p>
+              <div
+                class="
+                  result-tab__safesearch-list-meter
+                  result-tab__safesearch-list-meter-1
+                "
+              >
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-1-1
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-1-2
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-1-3
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-1-4
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-1-5
+                  "
+                ></div>
+              </div>
+            </div>
+            <div class="result-tab__safesearch-list">
+              <p class="result-tab__safesearch-list-text">
+                <span
+                  class="
+                    result-tab__safesearch-list-text-title
+                    result-tab__safesearch-list-text-title-2
+                  "
+                  >medical</span
+                >
+                <span
+                  class="
+                    result-tab__safesearch-list-text-result
+                    result-tab__safesearch-list-text-result-2
+                  "
+                ></span>
+              </p>
+              <div
+                class="
+                  result-tab__safesearch-list-meter
+                  result-tab__safesearch-list-meter-2
+                "
+              >
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-2-1
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-2-2
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-2-3
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-2-4
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-2-5
+                  "
+                ></div>
+              </div>
+            </div>
+            <div class="result-tab__safesearch-list">
+              <p class="result-tab__safesearch-list-text">
+                <span
+                  class="
+                    result-tab__safesearch-list-text-title
+                    result-tab__safesearch-list-text-title-3
+                  "
+                  >racy</span
+                >
+                <span
+                  class="
+                    result-tab__safesearch-list-text-result
+                    result-tab__safesearch-list-text-result-3
+                  "
+                ></span>
+              </p>
+              <div
+                class="
+                  result-tab__safesearch-list-meter
+                  result-tab__safesearch-list-meter-3
+                "
+              >
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-3-1
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-3-2
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-3-3
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-3-4
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-3-5
+                  "
+                ></div>
+              </div>
+            </div>
+            <div class="result-tab__safesearch-list">
+              <p class="result-tab__safesearch-list-text">
+                <span
+                  class="
+                    result-tab__safesearch-list-text-title
+                    result-tab__safesearch-list-text-title-4
+                  "
+                  >spoof</span
+                >
+                <span
+                  class="
+                    result-tab__safesearch-list-text-result
+                    result-tab__safesearch-list-text-result-4
+                  "
+                ></span>
+              </p>
+              <div
+                class="
+                  result-tab__safesearch-list-meter
+                  result-tab__safesearch-list-meter-4
+                "
+              >
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-4-1
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-4-2
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-4-3
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-4-4
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-4-5
+                  "
+                ></div>
+              </div>
+            </div>
+            <div class="result-tab__safesearch-list">
+              <p class="result-tab__safesearch-list-text">
+                <span
+                  class="
+                    result-tab__safesearch-list-text-title
+                    result-tab__safesearch-list-text-title-5
+                  "
+                  >violence</span
+                >
+                <span
+                  class="
+                    result-tab__safesearch-list-text-result
+                    result-tab__safesearch-list-text-result-5
+                  "
+                ></span>
+              </p>
+              <div
+                class="
+                  result-tab__safesearch-list-meter
+                  result-tab__safesearch-list-meter-5
+                "
+              >
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-5-1
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-5-2
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-5-3
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-5-4
+                  "
+                ></div>
+                <div
+                  class="
+                    result-tab__safesearch-list-meter-tab
+                    result-tab__safesearch-list-meter-tab-5-5
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><p>Let's analize your images!</p></footer>
+    <script src="../js/gitignore.js"></script>
+    <script src="../js/intern.js"></script>
+  </body>
 </html>
